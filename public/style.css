@@ -66,9 +66,16 @@ section{
     border-radius: 30px;
     backdrop-filter: var(--backdrop-filter-blur);
 }
+ul{
+    list-style: none;
+}
 #root{
     max-width: 1200px;
     margin:auto;
+    transition: all 0.5s ease;
+}
+#root.fade-out{
+    opacity: 0;
 }
 .container{
    padding: 0px 40px;
@@ -119,7 +126,8 @@ section{
     color: var(--white);
 }
 .home-section,
-.about-section{
+.about-section,
+.portfolio-section{
     display: flex;
 }
 .home-text,
@@ -156,6 +164,7 @@ section{
 .ptb-80{
     padding: 30px 0;
 }
+.section-title,
 .about-title{
     padding: 0px 15px;
     width: 100%;
@@ -298,9 +307,94 @@ button{
 .about-text .timeline-item h4 span{
     font-weight: 400;
 }
-.about-text .timeline-item p{
-
-}
 .about-text .btn{
     margin: 0 15px 15px 0;
+}
+/*portfolio*/
+.portfolio-item{
+    width: calc((100% / 3) - 30px);
+    margin: 0 15px 30px;
+}
+.portfolio-item-thumbnail{
+    padding: 10px;
+    background-color:var(--white-alpha-25);
+}
+.portfolio-item-thumbnail img{
+    width: 100%;;
+}
+.portfolio-item h3{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+.portfolio-item-details{
+    display: none;
+}
+/*portfolio popup*/
+.portfolio-popup{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    overflow-y: auto;
+    visibility: hidden;
+}
+.portfolio-popup.open{
+    visibility: visible;
+    overflow-y: auto;
+}
+.popup-inner{
+    min-height: 100vh;
+    padding: 40px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup-content{
+    background-color: var(--white-alpha-25);
+    padding: 30px;
+    border-radius: 30px;
+    max-width: 900px;
+    width: 100%;
+    border: 1px solid var(--white-alpha-40);
+    backdrop-filter: var(--backdrop-filter-blur);
+}
+.popup-header{
+    position: relative;
+}
+.popup-header .btn{
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -45px;
+    top: -45px;
+}
+.popup-thumbnail img{
+    border-radius: 10px;
+}
+.popup-header h3{
+    font-size: 25px;
+    text-transform: capitalize;
+    margin: 20px 0 15px;
+}
+.popup-body .description{
+    margin-bottom: 20px;
+}
+.popup-body .general-info li{
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.popup-body .general-info li span{
+    font-weight: 300;
+}
+.popup-body .general-info li span a{
+    text-transform: lowercase;
+    color: var(--main-color);
 }

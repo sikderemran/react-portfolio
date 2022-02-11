@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './components/Home';
 import About from './components/About';
+import RecentWork from './components/RecentWork';
 import NotFound from './components/NotFound';
 import reportWebVitals from './reportWebVitals';
 import {
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />}/>
+        <Route path="/works" element={<RecentWork />}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
