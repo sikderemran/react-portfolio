@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-      <div className="main">
         <section className="home-section align-items-center">
           <div className="container">
             <div className="row align-items-center">
@@ -22,7 +21,7 @@ function Home() {
             </div>
           </div>
         </section>
-      </div>
+        
   );
 }
 
