@@ -1,14 +1,10 @@
 function RecentWork() {
  
   const toggleClass = (e) => {
-    if(e.target.classList.contains('tab-item') && !e.target.classList.contains('active')){
-      const aboutSection=document.querySelector(".about-section")
-      aboutSection.querySelector(".tab-item.active").classList.remove("active")
-      e.target.classList.add('active')
-      const target=e.target.getAttribute('data-target')
-      aboutSection.querySelector(".tab-content.active").classList.remove("active")
-      aboutSection.querySelector(target).classList.add('active')
-    }
+    document.querySelector('.portfolio-popup').classList.toggle("open")
+    document.body.classList.toggle("hide-scrolling")
+    document.getElementById('root').classList.toggle("fade-out")
+    
     
   };
   return (
@@ -26,7 +22,7 @@ function RecentWork() {
               <img src="img/profile-img.png" alt="portfolio image" />
             </div>
             <h3 className="portfolio-item-title">Portfolio item</h3>
-            <button className="btn view-project-btn">view project</button>
+            <button onClick={toggleClass} className="btn view-project-btn">view project</button>
             <div className="portfolio-item-details">
                 <div className="description">
                     <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy</p>
@@ -148,7 +144,7 @@ function RecentWork() {
       <div className="popup-inner">
         <div className="popup-content">
           <div className="popup-header">
-            <button className="btn popup-close">x</button>
+            <button onClick={toggleClass} className="btn popup-close">x</button>
             <div className="popup-thumbnail">
               <img src="img/profile-img.png" alt="portfolio image"  />
             </div>
