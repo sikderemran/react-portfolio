@@ -4,7 +4,7 @@ function NotFound() {
   return (
     <div className="NotFound">
         <Header/>
-        <p>NotFound</p>
+        <p style={{textAlign:"center"}}>NotFound</p>
     </div>
   );
 }

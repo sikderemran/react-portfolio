@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import { Link } from "react-router-dom";
-
+import Header from './Header';
 function Home() {
   return (
         <section className="home-section align-items-center">
@@ -10,8 +10,8 @@ function Home() {
                 <p>Hello, I'm</p>
                 <h1>Md.Emran Sikder</h1>
                 <h2>Software Engineer</h2>
-                <a href="" className="btn">More About Me</a>
-                <a href="" className="btn">Portfolio</a>
+                <Link to="/about" className="btn">More About Me</Link>
+                <Link to="/works"  className="btn">Portfolio</Link>
               </div>
               <div className="home-img">
                 <div className="img-box">

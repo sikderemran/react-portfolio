@@ -3,9 +3,7 @@ function RecentWork() {
   const toggleClass = (e) => {
     document.querySelector('.portfolio-popup').classList.toggle("open")
     document.body.classList.toggle("hide-scrolling")
-    document.getElementById('root').classList.toggle("fade-out")
-    
-    
+    //document.getElementById('root').classList.toggle("portfolio-section")
   };
   return (
     <>
