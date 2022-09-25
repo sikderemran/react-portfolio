@@ -34,13 +34,15 @@ function About() {
             <div className="skills">
               <div className="skill-item">Html5</div>
               <div className="skill-item">css3</div>
-              <div className="skill-item">JavaScript</div>
-              <div className="skill-item">Php</div>
-              <div className="skill-item">mySql</div>
               <div className="skill-item">Bootstrap</div>
+              <div className="skill-item">JavaScript/ES6</div>
               <div className="skill-item">Jquery</div>
               <div className="skill-item">React</div>
+              <div className="skill-item">Python</div>
+              <div className="skill-item">Django</div>
+              <div className="skill-item">Php</div>
               <div className="skill-item">laravel</div>
+              <div className="skill-item">SQL</div>
               <div className="skill-item">cpanel</div>
               <div className="skill-item">git</div>
               <div className="skill-item">RestApi</div>
@@ -48,6 +50,7 @@ function About() {
             <div onClick={toggleClass} className="about-tabs">
               <button className='tab-item active'  data-target="#education">Education</button>
               <button className='tab-item' data-target="#experience">Experience</button>
+              <button className='tab-item' data-target="#contact">Contact</button>
             </div>
             <div className='tab-content active' id="education">
               <div className="timeline">
@@ -77,8 +80,29 @@ function About() {
                 </div>
               </div>
             </div>
+            <div className='tab-content' id="contact">
+              <div className="timeline">
+                <div className="timeline-item">
+                  <span className="email">Email</span>
+                  <p>sikderemran4688@gmail.com</p>
+                </div>
+                <div className="timeline-item">
+                  <span className="phone">Phone</span>
+                  <p>+8801641769553</p>
+                </div>
+                <div className="timeline-item">
+                  <span className="follow">Get In Touch</span>
+                  <p className="follow-me">
+                    <a href="https://www.linkedin.com/in/md-emran-sikder/" target={'blank'}><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/01641769553" target={'blank'}><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://github.com/sikderemran" target={'blank'}><i class="fab fa-github"></i></a>
+                    <a href="https://stackoverflow.com/users/14936905/md-emran-sikder" target={'blank'}><i class="fab fa-stack-overflow"></i></a>
+                  </p>
+                </div>
+                
+              </div>
+            </div>
             <a href="" className="btn">download cv</a>
-            <a href="" className="btn">contact me</a>
           </div>
         </div>
       </div>
