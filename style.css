@@ -233,6 +233,7 @@ button{
     position: relative;
     opacity: 0.5;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 .about-tabs .tab-item:last-child{
     margin: 0;
@@ -296,7 +297,10 @@ button{
 .about-text .timeline-item:last-child{
     margin-bottom: 0;
 }
-.about-text .timeline-item .date{
+.about-text .timeline-item .date,
+.about-text .timeline-item .email,
+.about-text .timeline-item .phone,
+.about-text .timeline-item .follow{
     display: block;
     color: var(--main-color);
     font-weight: 400;
@@ -399,5 +403,16 @@ button{
 }
 .popup-body .general-info li span a{
     text-transform: lowercase;
+    color: var(--main-color);
+}
+
+.follow-me a{
+    text-decoration: none;
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    padding: 5px 15px;
+    text-transform: capitalize;
+    margin: 0 20px 20px 0;
+    border-radius: 20px;
     color: var(--main-color);
 }
